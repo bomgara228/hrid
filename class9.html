@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            background-image: url(images/background.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            display: grid;
+
+            grid-template-rows: 10% 1fr 4fr 1fr 3fr 10%;
+            grid-template-columns: 5% 10% 1fr 1fr 1fr 5%;
+
+            grid-template-areas: 
+            "Header Header Header Header Header Header"
+            ". . first1 first2 first3 first3"
+            "list list first1 first2 first3 first3"
+            ". . first1 first2 first3 first3"
+            ". down down down down ."
+            "Footer Footer Footer Footer Footer Footer";
+            
+            grid-gap: 10px 20px;
+        }
+        h1 {
+            color: white;
+            
+        }
+        span {
+            color: white;
+        }
+        p {
+            color: white;
+            display: inline;
+            float: left;
+        }
+        li {
+            color: white;
+            background-color: rgba(0, 0, 255, 0.5);
+            display: inline-block;
+            text-align: center;
+            
+            border-radius: 10px;
+            
+            padding: 5px;
+        }
+        ul {
+            
+            background-color: rgba(0, 0, 0, 0.6);
+            list-style-type:  none;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        .first {
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 3px solid blue;
+            grid-area: first1;
+        }
+        img {
+            width: 55%;
+            height: 30%;
+            display: inline;
+            float: left;
+            margin: 0 1px 0 0;
+        }
+        .second {
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 3px solid blue;
+            grid-area: first2;
+        }
+        .third {
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 3px solid blue;
+            grid-area: first3;
+        }
+        .down {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 10px solid rgba(0, 0, 0, 0.01);
+            grid-area: down;
+            display: flex;
+            flex-direction: row;
+        }
+        .a1 {
+            background-color: rgba(0, 0, 255, 0.5);
+            grid-area: a1;
+        }
+        .a2 {
+            background-color: rgba(0, 0, 255, 0.5);
+            grid-area: a2;
+        }
+        .a3 {
+            background-color: rgba(0, 0, 255, 0.5);
+            grid-area: a3;
+        }
+        h3 {
+            color: white;
+            text-align: center;
+        }
+        .Header {
+            grid-area: Header;
+            margin: 0;
+            text-align: center;
+            background-color: rgba(0, 0, 255, 0.2);
+        }
+        .Footer {
+            grid-area: Footer;
+            margin: 0;
+            text-align: center;
+            background-color: rgba(0, 0, 255, 0.2);
+        }
+        .list {
+            grid-area: list;
+        }
+    </style>
+</head>
+<body>
+    <div class="Header">
+        <h1>Header</h1>
+    </div>
+  
+        <div class="list">
+            <ul>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+            </ul>
+        </div>
+        <div class="first">
+            <h1>Lorem</h1>
+            <img src="images/img1.jpg" alt="da">
+            <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis nobis eum amet iste tempora, laborum molestiae voluptates dicta explicabo ullam vitae? Qui quod alias voluptatem est obcaecati aperiam accusamus dicta?</span>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam nulla vero similique ipsam commodi odio voluptatem? Est earum voluptatum enim, quos aliquid non rem nemo ratione? At nesciunt eos error!</p>
+        </div>
+        <div class="second">
+            <h1>Lorem</h1>
+            <img src="images/img2.jpg" alt="da">
+            <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis nobis eum amet iste tempora, laborum molestiae voluptates dicta explicabo ullam vitae? Qui quod alias voluptatem est obcaecati aperiam accusamus dicta?</span>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam nulla vero similique ipsam commodi odio voluptatem? Est earum voluptatum enim, quos aliquid non rem nemo ratione? At nesciunt eos error!</p>
+        </div>
+        <div class="third">
+            <h1>Lorem</h1>
+            <img src="images/img3.jpg" alt="da">
+            <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis nobis eum amet iste tempora, laborum molestiae voluptates dicta explicabo ullam vitae? Qui quod alias voluptatem est obcaecati aperiam accusamus dicta?</span>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam nulla vero similique ipsam commodi odio voluptatem? Est earum voluptatum enim, quos aliquid non rem nemo ratione? At nesciunt eos error!</p>
+        </div>
+ 
+    <div class="down">
+        <div class="a1">
+            <h3>Lorem</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti et id facilis exercitationem minima magnam non. Officia unde recusandae voluptates inventore facere beatae quae molestias dicta error. Accusamus, laudantium expedita.</p>
+        </div>
+        <div class="a2">
+            <h3>Lorem</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti et id facilis exercitationem minima magnam non. Officia unde recusandae voluptates inventore facere beatae quae molestias dicta error. Accusamus, laudantium expedita.</p>
+        </div>
+        <div class="a3">
+            <h3>Lorem</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti et id facilis exercitationem minima magnam non. Officia unde recusandae voluptates inventore facere beatae quae molestias dicta error. Accusamus, laudantium expedita.</p>
+        </div>
+    </div>
+    <div class="Footer">
+        <h1>Footer</h1>
+    </div>
+</body>
+</html>
